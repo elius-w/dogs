@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Button from '../forms/Button';
+import Input from '../forms/Input';
 
 const LoginForm = () => {
 
@@ -32,19 +34,11 @@ const LoginForm = () => {
         <section>
             <h1>Login</h1>
             <form action="" onSubmit={handleSubmit}>
-                <input 
-                type="text" 
-                value={usename} 
-                onChange={({target}) => setUsername(target.value)}
-                />
+                <Input label="Usuário" type="text" name="username" />
+                <Input label="Senha" type="password" name="password"  />
+                
 
-                <input 
-                type="text" 
-                value={password} 
-                onChange={({target}) => setPassword(target.value)}
-                />
-
-                <button>Entrar</button>
+                <Button disabled>Entrar</Button>
             </form>
             <Link to="/login/criar">Cadastro</Link>
         </section>
