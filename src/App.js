@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Login from './components/login/Login';
 import { UserStorage } from './UserContext';
+import User from './components/user/User';
+import ProtectedRoute from './components/helper/ProtectedRoute';
 
 
 
@@ -17,7 +19,8 @@ function App() {
           <Header/>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/Login/*" element={<Login />} />
+              <Route path="login/*" element={<Login />} />
+              <ProtectedRoute path="conta/*" element={<User />} />
             </Routes>
           <Footer/>
         </UserStorage>
