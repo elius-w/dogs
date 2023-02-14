@@ -74,6 +74,7 @@ export function USER_GET(token) {
     };
   }
 
+ 
   export function PHOTO_GET(id) {
     return {
       url: `${API_URL}/api/photo/${id}`,
@@ -96,6 +97,20 @@ export function USER_GET(token) {
   
         },
         body: JSON.stringify(body),       
+      },     
+
+    };
+  }
+
+  export function PHOTO_DELETE(id) {
+    return {
+      url: `${API_URL}/api/photo/${id}`,
+      options: {
+        method: "DELETE",      
+        headers: {
+          Authorization: 'Bearer' + window.localStorage.getItem('token'),
+  
+        },
       },     
 
     };
