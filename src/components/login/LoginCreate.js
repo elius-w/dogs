@@ -6,6 +6,7 @@ import UserContext from '../../UserContext';
 import Button from '../forms/Button';
 import Input from '../forms/Input';
 import Error from '../helper/Error';
+import Head from '../helper/Head';
 
 
 const LoginCreate = () => {
@@ -32,6 +33,9 @@ const LoginCreate = () => {
 
     return (
         <section className="animeLeft">
+
+            <Head title="Crie sua conta"/>
+
             <h1 className="title">Cadasre-se</h1>
 
             <form onSubmit={handleSubmit}>
