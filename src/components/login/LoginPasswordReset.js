@@ -50,7 +50,7 @@ const LoginPasswordReset = () => {
 
 
     return (
-        <div>  
+        <section className="animeLeft">  
 
             <Head title="Resete a senha"/>
   
@@ -68,7 +68,7 @@ const LoginPasswordReset = () => {
 
             <Error error={error}/>
 
-        </div>
+        </section>
     )
 }
 
